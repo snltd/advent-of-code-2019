@@ -10,9 +10,9 @@ def fuel_required(mass, aggr = 0)
   req.positive? ? fuel_required(req, aggr + req) : aggr
 end
 
-fail unless fuel_required(14) == 2
-fail unless fuel_required(1969) == 966
-fail unless fuel_required(100756) == 50346
+raise unless fuel_required(14) == 2
+raise unless fuel_required(1969) == 966
+raise unless fuel_required(100_756) == 50_346
 
 input = IO.read('01.input').split("\n")
 

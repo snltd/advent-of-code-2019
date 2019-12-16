@@ -9,10 +9,10 @@ def fuel_required(mass)
   (mass / 3.0).floor - 2
 end
 
-fail unless fuel_required(12) == 2
-fail unless fuel_required(14) == 2
-fail unless fuel_required(1969) == 654
-fail unless fuel_required(100756) == 33583
+raise unless fuel_required(12) == 2
+raise unless fuel_required(14) == 2
+raise unless fuel_required(1969) == 654
+raise unless fuel_required(100_756) == 33_583
 
 input = IO.read('01.input').split("\n")
 

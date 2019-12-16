@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 test_input =
   'COM)B
@@ -46,13 +47,12 @@ end
 
 Test = Advent.new(test_input)
 
-fail unless Test.trace_path('D') == 3
-fail unless Test.trace_path('L') == 7
-fail unless Test.sum_of_all_paths == 42
+raise unless Test.trace_path('D') == 3
+raise unless Test.trace_path('L') == 7
+raise unless Test.sum_of_all_paths == 42
 
 input = IO.read('06.input')
 
 Real = Advent.new(input)
 
 puts Real.sum_of_all_paths
-

@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 test_input =
   'COM)B
@@ -42,7 +43,7 @@ class Advent
 
     return path if orbits.nil?
 
-    trace_path(orbits, path.<<( orbits))
+    trace_path(orbits, path.<<(orbits))
   end
 
   def hops_between(first, second)
@@ -56,7 +57,7 @@ end
 
 Test = Advent.new(test_input)
 
-fail unless Test.hops_between('YOU', 'SAN') == 4
+raise unless Test.hops_between('YOU', 'SAN') == 4
 
 input = IO.read('06.input')
 
