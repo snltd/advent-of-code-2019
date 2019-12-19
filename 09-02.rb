@@ -183,16 +183,6 @@ class IntcodeComputer
   end
 end
 
-# IC1 = IntcodeComputer.new
-# quine_prog = '109,1,204,-1,1001,100,1,100,1008,100,16,101,1006,101,0,99'
-# raise unless IC1.run!(quine_prog) == quine_prog
-#
-# IC2 = IntcodeComputer.new
-# raise unless IC2.run!('1102,34915192,34915192,7,4,7,99,0').size == 16
-#
-# IC3 = IntcodeComputer.new
-# raise unless IC3.run!('104,1125899906842624,99') == '1125899906842624'
-
 prog = IO.read('09.input')
 
 IC = IntcodeComputer.new
